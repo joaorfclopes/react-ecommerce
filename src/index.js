@@ -1,14 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
-import {ChakraProvider} from '@chakra-ui/react'
-import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client'
+import { ChakraProvider } from '@chakra-ui/react'
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 
 const client = new ApolloClient({
   uri: process.env.REACT_APP_GRAPH_CMS_ECOMMERCE,
-  cache: new InMemoryCache(),
+  cache: new InMemoryCache()
 })
 
 ReactDOM.render(
@@ -17,7 +16,7 @@ ReactDOM.render(
       <App />
     </ChakraProvider>
   </ApolloProvider>,
-  document.getElementById('root'),
+  document.getElementById('root')
 )
 
 reportWebVitals()
